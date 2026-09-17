@@ -19,7 +19,7 @@ hours = st.number_input(
     "Enter Study Hours",
     min_value=0.0,
     max_value=24.0,
-    value=2.0
+    value=3.0
 )
 
 attendance = st.number_input(
@@ -36,6 +36,6 @@ if st.button("Predict"):
     prediction = model.predict([[hours, attendance]])
 
     if prediction[0] == 1:
-        st.success("Student is predicted to PASS ✅")
+        st.success("Student is predicted to PASS ")
     else:
-        st.error("Student is predicted to FAIL ❌")
+        st.error("Student is predicted to FAIL ")
